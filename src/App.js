@@ -1,25 +1,56 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react'
+import Head from './components/Head'
+import History from './components/History'
+import Transaction from './components/Transaction'
 
-function App() {
+import './App.css'
+
+
+
+const App = () => {
+
+    let dummy = [
+        {
+            name : 'Books',
+            amount : '-100',
+            key : 1
+        },
+        {
+            name: 'Payment',
+            amount: '+500',
+            key : 2
+        },
+        {
+            name: 'ice-cream',
+            amount: '-10',
+            key : 3
+        }
+    ]
+    
+    let [data, setData] = useState(dummy);
+    
+    let total = 0;
+    let expense = 0;
+    let income = 0;
+    data.forEach(function(item) {
+        let amt = Number(item.amount)
+        total += amt
+        if( amt > 0){
+            income += amt
+        } else {
+            expense += amt
+        }
+    })
+
+    
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='app'>
+        <Head total={total} income={income} expense={expense} />
+        <History data={data}/>
+        <Transaction setData={setData} data={data}/>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App

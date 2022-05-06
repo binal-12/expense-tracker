@@ -1,38 +1,262 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Source+Sans+Pro:wght@700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body{
+    background-color: #F4F3F3;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+#root{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.app{
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+/* ================ HEAD ============= */
+
+.head{
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.head-heading{
+    font-family: 'Source Sans Pro';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 35.7209px;
+    color: #2E2E2E;
+
+    margin-top: 15px
+}
+
+.head-mainbalance{
+    margin-top: 40px;
+    align-self: flex-start;
+}
+
+.main-text{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    color: #848484;
+    text-transform: uppercase;
+}
+
+.main-amount{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 97.51%;
+    color: #2E2E2E;
+}
+
+.head-amount-container{
+    width: 350px;
+    margin-top: 20px;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 7px 8px rgba(0, 0, 0, 0.05);
+    border-radius: 7px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.amount-income{
+    margin: 18px 45px
+}
+
+.ver-br{
+    box-sizing: border-box;
+    height: 58px;
+    background-color: #CFCECE;
+    border: 1px solid #CFCECE;
+}
+
+.amount-income{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.amount-text{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    color: #484848;
+}
+
+.amount-income-money{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    color: #3D972E;
+    margin-top: -8px
+}
+
+.amount-expense-money{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    color: #CE3E3E;
+    margin-top: -10px
+}
+
+/* ========== HISTORY ============ */
+
+.history{
+    width: 350px;
+    margin-top: 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.app-head{
+    align-self: flex-start;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    color: #2E2E2E;
+}
+
+.hor-br{
+    box-sizing: border-box;
+    width: 350px;
+    background-color: #9B9898;
+    border: 1px solid #9B9898;
+}
+
+.history-list{
+    margin-top: 18px;
+}
+
+/* ========= ITEM ============ */
+
+.item{
+    height: 40px;
+    width: 350px;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 7px 8px rgba(0, 0, 0, 0.05);
+    border-radius: 4px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 10px
+}
+
+.item-container{
+    width: 310px;
+    margin-left: 20px;
+    margin-right: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.item-name{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    color: #494949;
+}
+
+.item-amount{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    color: #494949;
+}
+
+.item-colorband{
+    width: 10px;
+    height: 40px;
+    border-radius: 0px 4px 4px 0px;
+}
+
+/* ============== TRANSACTION =============== */
+
+.trans{
+    margin-top: 25px;
+    width: 350px;
+    margin-bottom: 45px
+}
+
+.trans-text{
+    margin-top: 25px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16.6667px;
+    color: #494949;
+}
+
+.trans-input{
+    padding-left: 20px;
+    width: 330px;
+    height: 40px;
+    background: #FFFFFF;
+    box-shadow: inset 0px 0px 3px rgba(0, 0, 0, 0.25);
+    border-radius: 4px;
+    border: none;
+    outline: none;
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    color: #494949;
+}
+
+.trans-subtext{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    color: #494949;
+    margin-bottom: 2px;
+}
+
+.button{
+    margin-top: 25px;
+    width: 350px;
+    height: 40px;
+    background-color: #A694F0;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16.6667px;
+    color: #FFFFFF;
 }
