@@ -1,7 +1,7 @@
 import React from 'react'
 import Item from './Item'
 
-const History = ( {data} ) => {
+const History = ( {data, imgHandler} ) => {
 
     const color = (amt) => {
         if(amt > 0){
@@ -21,6 +21,8 @@ const History = ( {data} ) => {
                     name={item.name}
                     amount={item.amount.slice(0,1) + '$' + item.amount.slice(1, item.amount.length)}
                     color={color(item.amount)}
+                    nkey = {item.key}
+                    imgHandler = {imgHandler}
                     key={item.key}
                 />
             ))} 

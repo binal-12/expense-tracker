@@ -42,12 +42,30 @@ const App = () => {
         }
     })
 
+    const imgHandler = (e) => {
+        let element = e.target.parentElement.parentElement.children[0].children[1]
+        // let ele1 = element.parentElement
+        // let ele2 = ele1.children[0].children[1]
+        let itemId = element.id
+        let itemKey = itemId.slice(2, itemId.length)
+        // console.log(itemKey)
+        let deletedData = [...data]
+        for(let i=0, n=data.length; i<n; i++){
+            if(data[i].key === Number(itemKey)){
+                deletedData.splice(i, 1)
+                break
+            }
+        }
+        console.log(deletedData)
+        setData(deletedData)
+    }
+
     
 
   return (
     <div className='app'>
         <Head total={total} income={income} expense={expense} />
-        <History data={data}/>
+        <History data={data} imgHandler={imgHandler}/>
         <Transaction setData={setData} data={data}/>
     </div>
   )
